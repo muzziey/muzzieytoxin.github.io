@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG Art Gallery & Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url("background.jpg"); /* same background as main page */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f5f5f5;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.4);
+      border-bottom: 2px solid gold;
+    }
+
+    header h1 {
+      color: gold;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+
+    section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: gold;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #ddd;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .team {
+      margin-top: 40px;
+    }
+
+    .team img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid gold;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      background-color: rgba(0,0,0,0.8);
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#gallery">Gallery</a>    
+    <a href="index.html#contact">Contact</a>
+    <a href="tattoo.html">Tattoo</a>
+  </nav>
+
+  <section>
+    <div class="about-container">
+      <h2>Our Story</h2>
+      <p>
+        JPG Art Gallery & Store was founded to celebrate the beauty of creativity — blending visual art, design, and commerce. 
+        Our mission is to provide a space where artists can showcase their talents and customers can experience and purchase unique pieces.
+      </p>
+      <br>
+      <p>
+        Every artwork and product we offer is inspired by the power of imagination, emotion, and storytelling. 
+        Whether it’s a painting, digital artwork, or an exclusive art-themed product — each piece carries a message meant to inspire and connect people through art.
+      </p>
+
+      <div class="team">
+        <h2>Meet the Artist</h2>
+        <img src="profile.jpg" alt="Melusi_Joshua">
+        <p><strong>Melusi_Joshua</strong> — Founder & Lead Artist</p>
+        <p>
+          Melusi is a visionary artist and designer passionate about blending modern creativity with culture and emotion. 
+          With years of experience in digital and fine arts, Melusi brings ideas to life through expressive color, form, and energy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <p>© 2025 JPG Art Gallery & Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

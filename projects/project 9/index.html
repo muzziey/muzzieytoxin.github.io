@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory & Stock Control System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Inventory & Stock Control System</h1>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#add-product">Add Product</a>
+        <a href="#reports">Sales Reports</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Manage Your Stock Easily</h2>
+      <p>Track inventory, monitor stock levels, and generate sales reports for your business.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <div class="container">
+      <h2>Product List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Stock Level</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Leather Bag</td>
+            <td>Boutique</td>
+            <td>5</td>
+            <td>R120</td>
+          </tr>
+          <tr>
+            <td>Hammer</td>
+            <td>Hardware</td>
+            <td>12</td>
+            <td>R15</td>
+          </tr>
+          <tr>
+            <td>Milk Pack</td>
+            <td>Supermarket</td>
+            <td>2</td>
+            <td>R222</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="alert">⚠ Low stock alert: Milk Pack only 2 left!</p>
+    </div>
+  </section>
+
+  <!-- Add Product Form -->
+  <section id="add-product">
+    <div class="container">
+      <h2>Add / Update Product</h2>
+      <form class="product-form">
+        <label for="name">Product Name</label>
+        <input type="text" id="name" placeholder="Enter product name" required>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="">--Select Category--</option>
+          <option value="boutique">Boutique</option>
+          <option value="hardware">Hardware</option>
+          <option value="supermarket">Supermarket</option>
+        </select>
+
+        <label for="stock">Stock Level</label>
+        <input type="number" id="stock" placeholder="Enter quantity" required>
+
+        <label for="price">Price</label>
+        <input type="number" id="price" placeholder="Enter price" required>
+
+        <button type="submit" class="btn">Add / Update Product</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sales Reports Section -->
+  <section id="reports">
+    <div class="container">
+      <h2>Sales Reports</h2>
+      <p>Track sales trends and stock movements. (UI only)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Sold</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Leather Bag</td>
+            <td>3</td>
+            <td>R360</td>
+          </tr>
+          <tr>
+            <td>Hammer</td>
+            <td>5</td>
+            <td>R75</td>
+          </tr>
+          <tr>
+            <td>Milk Pack</td>
+            <td>8</td>
+            <td>R16</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Inventory & Stock Control System by muzzieytoxin</p>
+    </div>
+  </footer>
+</body>
+</html>

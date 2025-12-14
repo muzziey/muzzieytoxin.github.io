@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo"></div>
+    <div>
+      <h1 class="brand-title">My School</h1>
+      <p class="brand-sub">Student Management Dashboard</p>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <input type="text" id="searchInput" placeholder="Search students..." onkeyup="searchStudents()">
+    <button class="btn primary" onclick="scrollToForm()">Add Student</button>
+    <button class="btn outline" onclick="exportCSV()">Export CSV</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <a class="nav-link active" href="#">Dashboard</a>
+      <a class="nav-link" href="#">Students</a>
+      <a class="nav-link" href="#">Classes</a>
+      <a class="nav-link" href="#">Attendance</a>
+      <a class="nav-link" href="#">Reports</a>
+      <a class="nav-link" href="#">Settings</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <section class="content">
+
+    <!-- Student Registration -->
+    <section class="panel" id="formPanel">
+      <h2>Register New Student</h2>
+
+      <form id="studentForm">
+        <div class="row">
+          <label>First Name</label>
+          <input type="text" id="firstName" required placeholder="First name">
+        </div>
+
+        <div class="row">
+          <label>Last Name</label>
+          <input type="text" id="lastName" required placeholder="Last name">
+        </div>
+
+        <div class="grid">
+          <div class="row">
+            <label>Date of Birth</label>
+            <input type="date" id="dob" required>
+          </div>
+
+          <div class="row">
+            <label>Gender</label>
+            <select id="gender" required>
+              <option value="">Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Grade</label>
+          <select id="grade" required>
+            <option value="">Select grade</option>
+            <option>Grade 1</option>
+            <option>Grade 2</option>
+            <option>Grade 3</option>
+            <option>Grade 4</option>
+            <option>Grade 5</option>
+          </select>
+        </div>
+
+        <div class="grid">
+          <div class="row">
+            <label>Parent/Guardian</label>
+            <input type="text" id="parent" required placeholder="Guardian name">
+          </div>
+
+          <div class="row">
+            <label>Phone</label>
+            <input type="tel" id="phone" placeholder="012 345 6789" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Address</label>
+          <input type="text" id="address" placeholder="Street, suburb, city" required>
+        </div>
+
+        <div class="row">
+          <label>Notes (optional)</label>
+          <textarea id="notes" rows="3" placeholder="Allergies, special notes…"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn primary" onclick="saveStudent()">Save Student</button>
+          <button type="reset" class="btn outline">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Student List -->
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Registered Students</h2>
+        <button class="btn small" onclick="refreshList()">Refresh</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Grade</th>
+              <th>DOB</th>
+              <th>Parent</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>Alice Johnson</td>
+              <td>Grade 3</td>
+              <td>2014-05-12</td>
+              <td>Mary Johnson</td>
+              <td>071 555 0123</td>
+              <td>
+                <button class="btn tiny" onclick="editStudent()">Edit</button>
+                <button class="btn tiny outline" onclick="deleteStudent(this)">Delete</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </section>
+</main>
+
+<footer class="footer">
+  © 2025 My School — Student System UI by muzzietoxin
+</footer>
+
+<script>
+function scrollToForm() {
+  document.getElementById("formPanel").scrollIntoView({ behavior: "smooth" });
+}
+
+function saveStudent() {
+  alert("Student saved successfully!");
+}
+
+function editStudent() {
+  alert("Edit function demo — connect backend to enable editing.");
+}
+
+function deleteStudent(btn) {
+  btn.parentNode.parentNode.remove();
+  alert("Student deleted!");
+}
+
+function refreshList() {
+  alert("List refreshed!");
+}
+
+function searchStudents() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const rows = document.querySelectorAll("#tableBody tr");
+
+  rows.forEach(row => {
+    const name = row.children[0].innerText.toLowerCase();
+    row.style.display = name.includes(input) ? "" : "none";
+  });
+}
+
+function exportCSV() {
+  const csv = "Name,Grade,DOB,Parent,Phone\nAlice Johnson,Grade 3,2014-05-12,Mary Johnson,0715550123";
+  const blob = new Blob([csv], { type: "text/csv" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "students.csv";
+  link.click();
+}
+</script>
+
+</body>
+</html>

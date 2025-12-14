@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Muzziey_Toxin</title>
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/about.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+  font-family: 'Montserrat', sans-serif;
+  background: url('assets/hero.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+  /* --- Hamburger Menu --- */
+  header {
+  position: relative;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 20px;    /* adjust to your liking */
+  right: 20px;  /* pushes it to the right corner */
+}
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #f13f08;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    transition: right 0.5s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+}
+.nav-links a[href*="contact"]:hover {
+  color: #f13f08;
+}
+   .social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a i {
+  font-size: 2rem;
+  color: #f13f08;
+  transition: 0.3s ease;
+}
+
+.social-links a i:hover {
+  color: #4e73df;   /* Change to your theme color */
+  transform: scale(1.2);
+}
+
+
+/* Contact */
+.contact h2 {
+  color: #fff;
+}
+.contact p {
+  color: #ddd;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+form button {
+  background: #f13f08;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background: #fff;
+  color: #f13f08;
+}
+/* WhatsApp Floating Button */
+.whatsapp-float { 
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1a1a1a;
+  margin-top: 2rem;
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, #ff4b2b, #ff6f4b) 1;
+  color: #ffffff;
+}
+</style>
+
+ <!-- Navbar -->
+<header>
+  <nav>
+    <h1 class="logo">MUZZIEY_TOXIN</h1>
+
+    <!-- Menu icon (hamburger) -->
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+   <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Get In Touch:</p>
+
+    <a href="https://mail.google.com/mail/?view=cm&to=muzzieytoxin@gmail.com" target="_blank">
+  muzzieytoxin@gmail.com</a>
+    </a>
+<div class="social-links">
+
+  <a href="https://github.com/Muzziey" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/“Muzziey Toxin”" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="https://instagram.com/Muzziey_Toxin" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://facebook.com/Muzziey_Toxin" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a href="https://youtube.com/@YOUR_USERNAME" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+
+</div>
+
+   <form action="https://formspree.io/f/mzzjnwrj" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" id="Phone" name="Phone" placeholder="Your Phone Number" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+        <style>
+           textarea {
+          width: 95%;
+          height: 100px; /* make it bigger */
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 7px;
+          resize: vertical;}
+</style>
+  <button type="submit">Send</button>
+  
+</form>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/27671408694?text=Hi!%20I'm%20interested%20in%20your%20work" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  </section>
+  <!-- JavaScript for Menu Toggle -->
+<script>
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuIcon.classList.toggle('open');
+});
+</script>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Muzziey_Toxin • All Rights Reserved
+  </footer>
+</body>
+</html>

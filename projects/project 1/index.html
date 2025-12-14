@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Event Booking System</h1>
+      <nav>
+        <a href="#booking">Book Now</a>
+        <a href="#events">Events</a>
+        <a href="#dashboard">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Book Your Event Easily</h2>
+      <p>Weddings, Parties, Photoshoots, Studio Sessions & more</p>
+      <a href="#booking" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events">
+    <div class="container">
+      <h2>Available Events</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <h3>Weddings</h3>
+          <p>Make your special day unforgettable.</p>
+        </div>
+        <div class="event-card">
+          <h3>Parties</h3>
+          <p>Celebrate with style and fun.</p>
+        </div>
+        <div class="event-card">
+          <h3>Photoshoots</h3>
+          <p>Capture memories professionally.</p>
+        </div>
+        <div class="event-card">
+          <h3>Studio Sessions</h3>
+          <p>Perfect for music or video recordings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking">
+    <div class="container">
+      <h2>Book Your Event</h2>
+      <form class="booking-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="event">Select Event</label>
+        <select id="event" required>
+          <option value="">--Choose an Event--</option>
+          <option value="wedding">Wedding</option>
+          <option value="party">Party</option>
+          <option value="photoshoot">Photoshoot</option>
+          <option value="studio">Studio Session</option>
+        </select>
+
+        <label for="date">Select Date</label>
+        <input type="date" id="date" required>
+
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Admin Dashboard Section -->
+  <section id="dashboard">
+    <div class="container">
+      <h2>Admin Dashboard</h2>
+      <p>View upcoming bookings and manage events. (UI only)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Event</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>Wedding</td>
+            <td>2025-12-20</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>jane@example.com</td>
+            <td>Party</td>
+            <td>2025-12-25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Event Booking System by muzzieytoxin</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG Art Gallery & Store</title>
+
+     <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url("background.jpg"); /* 🖼️ your background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f5f5f5;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #cce5ecd2;
+      color: #f5f5f5;
+    }
+
+    header {
+      background: linear-gradient(to right, #000, #333);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: gold;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+/* Sticky Navigation Bar */
+.navbar {
+  position: fixed;           /* stays visible while scrolling */
+  top: 0;                    /* stick to the top */
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);  /* nice glass effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 15px 0;
+  z-index: 1000;
+  transition: 0.3s;
+  border-bottom: 1px solid gold;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* Add some spacing so content doesn't hide behind navbar */
+section, header {
+  padding-top: 80px;
+}
+
+    section {
+      padding: 60px 5%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: gold;
+      letter-spacing: 1px;
+    }
+
+    /* --- GALLERY --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item .info {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .gallery-item:hover .info {
+      opacity: 1;
+    }
+
+    /* --- SHOP --- */
+    .shop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      background: #2a2a2a;
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin-top: 15px;
+      color: gold;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+    }
+    /* CONTACT SECTION */
+.contact-section {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 10%;
+  text-align: center;
+  color: #fff;
+  border-top: 2px solid gold;
+}
+
+.contact-section h2 {
+  color: gold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-form {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  color: gold;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: gold;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+.contact-info {
+  max-width: 350px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid gold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.contact-info h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JPG Art Gallery & Store</h1>
+    <p>shoot your shot  — explore and shop our exclusive art collection.</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="#gallery">Gallery</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+    <a href="about.html">About</a>
+    <a href="tattoo.html">Tattoo</a>
+
+
+  </nav>
+  <body>
+
+  <h2>My Sales Video</h2>
+
+  <video width="640" height="360" autoplay muted loop controls>
+    <source src="Sales.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video width="640" height="360" autoplay muted loop controls>
+    <source src="Sales2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</body>
+
+  <!-- Art Gallery -->
+  <section id="gallery">
+    <h2>Featured Artworks</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="artwork1.jpg" alt="Artwork 1">
+        <div class="info">“Golden Dreams” — Oil on Canvas</div>
+      </div>
+      <div class="gallery-item">
+        <img src="artwork2.jpg" alt="Artwork 2">
+        <div class="info">“Urban Night” — Digital Art</div>
+      </div>
+      <div class="gallery-item">
+        <img src="artwork3.jpg" alt="Artwork 3">
+        <div class="info">“Desert Mirage” — Acrylic</div>
+      </div>
+      <div class="gallery-item">
+        <img src="artwork4.jpg" alt="Artwork 4">
+        <div class="info">“Ocean Spirit” — Watercolor</div>
+      </div>
+      <div class="gallery-item">
+        <img src="artwork5.jpg" alt="Artwork 5">
+        <div class="info">“Ocean Spirit” — Watercolor</div>
+    </div>
+    <div class="gallery-item">
+        <img src="artwork6.jpg" alt="Artwork 6">
+        <div class="info">“Ocean Spirit” — Watercolor</div>
+        </div>
+        </div>
+  </section>
+
+  <!-- Shop Section -->
+  <section id="shop">
+    <h2>Shop Prints & Merchandise</h2>
+    <div class="shop">
+      <div class="product">
+        <img src="product1.jpg" alt="Art Print">
+        <h3>“Golden Dreams” Print</h3>
+        <p>High-quality A3 print of the original painting.</p>
+        <div class="price">R600</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="product4.jpg" alt="Art Tote Bag">
+        <h3>Art Tote Bag</h3>
+        <p>Stylish tote bag printed with “Urban Night”.</p>
+        <div class="price">R250</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="product3.jpg" alt="Art T-shirt">
+        <h3>Art T-Shirt</h3>
+        <p>Soft cotton T-shirt featuring “Desert Mirage”.</p>
+        <div class="price">R200</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+       <div class="product">
+        <img src="product5.jpg " alt="Art T-shirt">
+        <h3>Art T-Shirt</h3>
+        <p>Soft cotton T-shirt featuring “Desert Mirage”.</p>
+        <div class="price">R200</div>
+        <button class="btn">Add to Cart</button>
+      </div>
+       <div class="product">
+        <img src="product7.jpg" alt="Art T-shirt">
+        <h3>Art T-Shirt</h3>
+        <p>Soft cotton T-shirt featuring “Desert Mirage”.</p>
+        <div class="price">R200</div>
+        <button class="btn">Add to Cart</button>
+    </div>
+  </section>
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you! Whether it’s about artwork, tattoos, or products — drop us a message below.</p>
+
+  <div class="contact-container">
+    <form action="contact.php" method="post" class="contact-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="e.g. Tattoo Booking, Art Inquiry">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Our Studio</h3>
+      <p>📍 45 Art Street, Johannesburg, South Africa</p>
+      <p>📞 +27 65 987 4321</p>
+      <p>📧 info@muzzieyart.com</p>
+      <br>
+      <h3>Follow Us</h3>
+      <p>Instagram | Facebook | TikTok | X</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 JPG Art Gallery & Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Muzziey_Toxin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+  <style>
+    body {
+      /* Add your image file here */
+      background-image: url('assets/hero.jpg');
+
+      /* Make the image cover the whole page */
+      background-size: cover;
+
+      /* Center the image */
+      background-position: center;
+
+      /* Prevent the image from repeating */
+      background-repeat: no-repeat;
+
+      /* Optional: make the image stay fixed while scrolling */
+      background-attachment: fixed;
+
+      /* Optional text styling */
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+    }
+    /* ==============================
+   SERVICES SECTION STYLES
+============================== */
+
+.services {
+  max-width: 1099px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* Grid layout for service cards */
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card design */
+.services .card {
+  background: #928e8e;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 6px 15px #ff4b2b;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon styling */
+.services .card i {
+  color: #ff4b2b;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.services .card:hover i {
+  color: #005ecc;
+}
+
+/* Service title */
+.services .card h3 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.services .card p {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* CTA Button (View Prices or Contact Us) */
+.services .cta {
+  display: inline-block;
+  background: #ff4b2b;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.services .cta:hover {
+  background: #005ecc;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services p {
+    font-size: 1rem;
+  }
+
+  .services .card {
+    padding: 25px;
+  }
+}
+
+  </style>
+
+<body>
+ <!-- Navbar -->
+<header>
+  <nav>
+    <h1 class="logo">MUZZIEY_TOXIN</h1>
+    <!-- Menu icon (hamburger) -->
+    <div class="menu-icon" id="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+  <!-- Services Section -->
+  <section class="services">
+    <a href="portfolio.html" class="btn">View My Portfolio</a>
+    <h2> Services Offer</h2>
+    <div class="social-links">
+
+  <a href="https://github.com/Muzziey" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+<a href="https://www.linkedin.com/in/muzziey-toxin-2b8ab9379/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+</a>
+
+
+  <a href="https://instagram.com/Muzziey_Toxin" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://facebook.com/profile.php?id=61561438740724" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a href="https://youtube.com/@MuzzieyToxin" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+
+</div>
+    <p>Here’s what I can build, design, and create for you.</p>
+
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-code fa-3x"></i>
+        <h3>Website Design</h3>
+        <a href="prices/website-design.html" class="cta">View Prices</a>
+        <p>Custom websites using HTML, CSS, JavaScript, and modern frameworks. Fast, responsive, and user-focused.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+            <div class="card">
+        <i class="fas fa-mobile-alt fa-3x"></i>
+        <h3>Responsive Design</h3>
+         <a href="prices/responsive-design.html" class="cta">View Prices</a>
+        <p>Mobile-first layouts that adapt to all screen sizes for an optimal browsing experience.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-laptop-code fa-3x"></i>
+        <h3>Software Solutions</h3>
+         <a href="prices/software-solutions.html" class="cta">View Prices</a>
+        <p>End-to-end system design and automation tools for your business or brand — from idea to deployment.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-store fa-3x"></i>
+        <h3>Online Store Setup</h3>
+        <a href="prices/online-store.html" class="cta">View Prices</a>
+        <p>E-commerce development with secure checkout systems, cart features, and stylish product displays.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-palette fa-3x"></i>
+        <h3>Brand & UI Design</h3>
+        <a href="prices/brand-ui.html" class="cta">View Prices</a>
+        <p>Logo, color palette, and web aesthetic creation that matches your personality and project goals.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-database fa-3x"></i>
+        <h3>Database Integration</h3>
+         <a href="prices/database-integration.html" class="cta">View Prices</a>
+        <p>MySQL or PHP integration for storing user data, login systems, and managing backend services.</p>
+         <a href="contact.html" class="cta">Contact Us</a>
+      </div>
+
+
+  </section>
+
+<!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Get In Touch:</p>
+
+    <a href="https://mail.google.com/mail/?view=cm&to=muzzieytoxin@gmail.com" target="_blank">
+  muzzieytoxin@gmail.com</a>
+    </a>
+<div class="social-links">
+
+  <a href="https://github.com/Muzziey" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+<a href="https://www.linkedin.com/in/muzziey-toxin-2b8ab9379/" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+</a>
+
+
+  <a href="https://instagram.com/Muzziey_Toxin" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://facebook.com/profile.php?id=61561438740724" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <a href="https://youtube.com/@MuzzieyToxin" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+
+</div>
+
+  <form id="contactForm" action="https://formspree.io/f/mzzjnwrj" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" id="Phone" name="Phone" placeholder="Your Phone Number" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+        <style>
+           textarea {
+          width: 95%;
+          height: 100px; /* make it bigger */
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 7px;
+          resize: vertical;}
+</style>
+  <button type="submit">Send</button>
+  
+</form>
+<script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // stop automatic page reload
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset(); // 🔥 THIS CLEARS THE FORM
+    } else {
+      alert("There was an error sending your message.");
+    }
+  });
+</script>
+
+  
+</form>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/27671408694?text=Hi!%20I'm%20interested%20in%20your%20websites" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  </section>
+  <script>
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
+
+menuIcon.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuIcon.classList.toggle('open');
+});
+</script>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Muzziey_Toxin • All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Optional: Add scroll reveal animation (same as your index)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.classList.add('hidden');
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

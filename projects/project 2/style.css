@@ -1,0 +1,132 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e3fa9;
+  --light: #f8fafc;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 12px;
+  --shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+/* Topbar */
+.topbar {
+  width: 100%;
+  background: var(--primary);
+  padding: 18px 28px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.brand {display:flex; gap:12px; align-items:center;}
+.logo {
+  background: rgba(255,255,255,0.2);
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 22px;
+}
+.brand-title {margin:0; font-size:20px; font-weight:600;}
+.brand-sub {margin:0; font-size:13px; opacity:0.9;}
+
+.top-actions input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+}
+.top-actions {display:flex; gap:10px}
+
+/* Buttons */
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight:500;
+}
+
+.btn.primary {background: var(--primary-dark); color:white;}
+.btn.outline {background:white; border:1px solid #d5e1f5; color: var(--primary);}
+.btn.small {padding: 6px 10px; font-size: 14px;}
+.btn.tiny {padding: 4px 7px; font-size: 12px;}
+
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar nav {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.nav-link {
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-decoration:none;
+  color: var(--muted);
+}
+.nav-link.active, .nav-link:hover {
+  background: #e6ecff;
+  color: var(--primary);
+}
+
+/* Panels */
+.panel {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Form */
+.row {display:flex; flex-direction:column; gap:6px;}
+.grid {display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #dce3ee;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-actions {display:flex; gap:12px; margin-top:10px}
+
+/* Table */
+.table-wrap {overflow:auto; border-radius:10px;}
+table {width:100%; border-collapse:collapse;}
+thead th {
+  background:#f1f5ff;
+  padding:12px;
+  text-align:left;
+}
+tbody td {
+  padding:12px;
+  border-bottom:1px solid #e5e7eb;
+}
+
+/* Footer */
+.footer {
+  text-align:center;
+  padding:20px;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .container{grid-template-columns:1fr;}
+  .grid{grid-template-columns:1fr;}
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-calculator"></i> Loan Management System</h1>
+            <p>Calculate your loan payments and view detailed payment schedules</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Loan Calculator Section -->
+            <section class="calculator-section">
+                <h2>Loan Calculator</h2>
+                <form id="loanForm" class="loan-form">
+                    <div class="form-group">
+                        <label for="loanAmount">
+                            <i class="fas fa-dollar-sign"></i> Loan Amount (R)
+                        </label>
+                        <input type="number" id="loanAmount" name="loanAmount" 
+                               placeholder="Enter loan amount" required min="1" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interestRate">
+                            <i class="fas fa-percent"></i> Annual Interest Rate (%)
+                        </label>
+                        <input type="number" id="interestRate" name="interestRate" 
+                               placeholder="Enter interest rate" required min="0" max="100" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanTerm">
+                            <i class="fas fa-calendar-alt"></i> Loan Term (Years)
+                        </label>
+                        <input type="number" id="loanTerm" name="loanTerm" 
+                               placeholder="Enter loan term in years" required min="1" step="0.5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentFrequency">
+                            <i class="fas fa-clock"></i> Payment Frequency
+                        </label>
+                        <select id="paymentFrequency" name="paymentFrequency" required>
+                            <option value="12">Monthly (12 payments/year)</option>
+                            <option value="24">Bi-weekly (24 payments/year)</option>
+                            <option value="52">Weekly (52 payments/year)</option>
+                            <option value="4">Quarterly (4 payments/year)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-calculate">
+                        <i class="fas fa-calculator"></i> Calculate Loan
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>Loan Summary</h2>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Monthly Payment</h3>
+                            <p class="amount" id="monthlyPayment">R 0.00</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Payment</h3>
+                            <p class="amount" id="totalPayment">R 0.00</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Total Interest</h3>
+                            <p class="amount" id="totalInterest">R 0.00</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Number of Payments</h3>
+                            <p class="amount" id="numberOfPayments">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Schedule -->
+                <div class="payment-schedule">
+                    <h2>Payment Schedule</h2>
+                    <div class="schedule-controls">
+                        <button class="btn-export" id="exportBtn">
+                            <i class="fas fa-download"></i> Export to CSV
+                        </button>
+                        <button class="btn-print" id="printBtn">
+                            <i class="fas fa-print"></i> Print Schedule
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table id="paymentTable">
+                            <thead>
+                                <tr>
+                                    <th>Payment #</th>
+                                    <th>Payment Date</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Total Payment</th>
+                                    <th>Remaining Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="paymentTableBody">
+                                <!-- Payment schedule will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Loan Management System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

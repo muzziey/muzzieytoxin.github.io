@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOOD ORDERING WEBSITE </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header">
+  <h1>FOOD ORDERING WEBSITE</h1>
+  <input type="text" id="search" placeholder="Search for your food...">
+</header>
+<!-- Category Display Section -->
+<section id="category-display">
+  <h2>Shop by Category</h2>
+  <div class="category-buttons">
+    <button class="cat-btn" data-target="kota">Kotas</button>
+    <button class="cat-btn" data-target="burger">Burgers</button>
+    <button class="cat-btn" data-target="fries">Fries</button>
+    <button class="cat-btn" data-target="drinks">Drinks</button>
+  </div>
+</section>
+
+
+<!-- Category Sections -->
+<section class="category-section" id="kota">
+  <h2>Kotas</h2>
+  <div class="carousel-container">
+    <!-- Kota products -->
+    <div class="food-card" data-category="kota">
+      <img src="Kota Cheese.jpg" alt="Kota Cheese">
+      <h3>Kota Cheese</h3>
+      <p>Soft bread with cheese, salad, and sauce.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Sauce" data-price="1"> Extra Sauce +R20:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="3">R60:00</p>
+    </div>
+
+    <div class="food-card" data-category="kota">
+      <img src="Kota Spicy.jpg" alt="Kota Spicy">
+      <h3>Kota Spicy</h3>
+      <p>Bread with spicy sausage, salad, and sauce.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Sauce" data-price="1"> Extra Sauce +R20:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="3">R60:00</p>
+    </div>
+
+    <div class="food-card" data-category="kota">
+      <img src="Kota Double.jpg" alt="Kota Double">
+      <h3>Kota Double</h3>
+      <p>Double filling with cheese and sausage.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Cheese" data-price="1"> Extra Cheese +R20:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="4">R80:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Burger Section -->
+<section class="category-section" id="burger">
+  <h2>Burgers</h2>
+  <div class="carousel-container">
+    <div class="food-card" data-category="burger">
+      <img src="Cheese burger.jpg" alt="Cheeseburger">
+      <h3>Cheeseburger</h3>
+      <p>Classic beef burger with cheese and lettuce.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Cheese" data-price="1"> Extra Cheese +R10:00</label>
+        <label><input type="checkbox" data-extra="Bacon" data-price="2"> Bacon +R20:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="5">R70:00</p>
+    </div>
+
+    <div class="food-card" data-category="burger">
+      <img src="Chicken burger.jpg" alt="Chicken Burger">
+      <h3>Chicken Burger</h3>
+      <p>Grilled chicken with lettuce and mayo.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Cheese" data-price="1"> Cheese +R10:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="6">R75:00</p>
+    </div>
+
+    <div class="food-card" data-category="burger">
+      <img src="Double burger.jpg" alt="Double Burger">
+      <h3>Double Burger</h3>
+      <p>Two beef patties with cheese and special sauce.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Patty" data-price="2"> Extra Patty +R10:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="7">R90:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fries Section -->
+<section class="category-section" id="fries">
+  <h2>Fries</h2>
+  <div class="carousel-container">
+    <div class="food-card" data-category="fries">
+      <img src="Regular fries.jpg" alt="Regular Fries">
+      <h3>Regular Fries</h3>
+      <p>Crispy golden fries.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Cheese" data-price="1"> Cheese +R10:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="2">R35:00</p>
+    </div>
+
+    <div class="food-card" data-category="fries">
+      <img src="spicy fries.jpg" alt="Spicy Fries">
+      <h3>Spicy Fries</h3>
+      <p>Fries with a spicy kick.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Cheese" data-price="1"> Cheese +R10:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="2">R40:00</p>
+    </div>
+
+    <div class="food-card" data-category="fries">
+      <img src="loaded fries.jpg" alt="Loaded Fries">
+      <h3>Loaded Fries</h3>
+      <p>Fries topped with cheese and bacon bits.</p>
+      <div class="options">
+        <label><input type="checkbox" data-extra="Extra Cheese" data-price="1"> Extra Cheese +R10:00</label>
+      </div>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="3">R50:00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Drinks Section -->
+<section class="category-section" id="drinks">
+  <h2>Drinks</h2>
+  <div class="carousel-container">
+    <div class="food-card" data-category="drinks">
+      <img src="coke.jpg" alt="Coke">
+      <h3>Coke</h3>
+      <p>Refreshing cola drink.</p>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="1">R20:00</p>
+    </div>
+
+    <div class="food-card" data-category="drinks">
+      <img src="fanta.jpg" alt="Fanta">
+      <h3>Fanta</h3>
+      <p>Sweet orange soda.</p>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="1">R20:00</p>
+    </div>
+
+    <div class="food-card" data-category="drinks">
+      <img src="sprite.jpg" alt="Sprite">
+      <h3>Sprite</h3>
+      <p>Lemon-lime soda.</p>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="1">R20:OO</p>
+    </div>
+
+    <div class="food-card" data-category="drinks">
+      <img src="water.jpg" alt="Water">
+      <h3>Water</h3>
+      <p>Fresh bottled water.</p>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="1">FREE</p>
+    </div>
+
+    <div class="food-card" data-category="drinks">
+      <img src="fruit juice.jpg" alt="Juice">
+      <h3>Fruit Juice</h3>
+      <p>Freshly squeezed juice.</p>
+      <div class="qty-control">
+        <button class="minus">-</button>
+        <span class="qty">0</span>
+        <button class="plus">+</button>
+      </div>
+      <p class="price" data-price="2">R50.00</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide-In Cart -->
+<div id="cart" class="closed">
+  <div id="cart-header">
+    <h3>Your Cart</h3>
+    <button id="cart-close">&#10005;</button> <!-- X to close -->
+  </div>
+  <ul id="cartItems"></ul>
+  <p>Total: R<span id="total">0</span></p>
+  <button id="checkoutBtn">Order via WhatsApp</button>
+</div>
+
+<!-- Cart Button -->
+<button id="cart-btn">&#128722; Cart (<span id="cart-count">0</span>)</button>
+
+
+<script src="script.js"></script>
+</body>
+</html>

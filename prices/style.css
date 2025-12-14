@@ -1,0 +1,90 @@
+/* =============================
+   PRICE PAGE STYLES
+============================== */
+
+.price-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.price-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.price-page p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.price-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Individual price cards */
+.price-page .card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.price-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.price-page .card h3 {
+  color: #111;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.price-page .card p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.price-page .card h4 {
+  font-size: 1.6rem;
+  color: #0078ff;
+  font-weight: bold;
+}
+
+/* CTA Button */
+.price-page .cta {
+  display: inline-block;
+  margin-top: 40px;
+  background: #0078ff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.price-page .cta:hover {
+  background: #005ecc;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .price-page h2 {
+    font-size: 2rem;
+  }
+  .price-page p {
+    font-size: 1rem;
+  }
+}

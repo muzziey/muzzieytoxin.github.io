@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tattoo Studio | Muzziey Art & Ink</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-image: url("tattoo-bg.jpg"); /* use your tattoo background */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      border-bottom: 2px solid gold;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: gold;
+      transform: scale(1.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 120px 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      color: gold;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    h2 {
+      color: gold;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* Tattoo Gallery */
+    .tattoo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .tattoo-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+    }
+
+    .tattoo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+    }
+
+    .tattoo-card img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid gold;
+      margin-bottom: 10px;
+    }
+
+    /* Booking Section */
+    .booking {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 10%;
+      margin-top: 60px;
+      border-top: 2px solid gold;
+    }
+
+    .booking-form {
+      max-width: 450px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .booking-form label {
+      display: block;
+      text-align: left;
+      color: gold;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .booking-form input,
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      background: gold;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .booking-form button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.85);
+      color: #aaa;
+      margin-top: 60px;
+      border-top: 1px solid gold;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+   
+    <a href="about.html">About</a>
+    <a href="#booking">Booking</a>
+   <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>JPG Tattoo Studio</h1>
+    <p>Where Art Meets Skin — Custom Tattoo Designs, Fine Line & Realism</p>
+  </header>
+
+  <!-- Tattoo Gallery Section -->
+  <section id="tattoo-gallery">
+    <h2>Our Tattoo Work</h2>
+    <p>Explore some of our finest ink pieces and creative styles crafted with passion and precision.</p>
+
+    <div class="tattoo-gallery">
+      <div class="tattoo-card">
+        <img src="tattoo1.jpg" alt="Tattoo Design 1">
+        <p>Black & Grey Realism</p>
+      </div>
+      <div class="tattoo-card">
+        <img src="tattoo2.jpg" alt="Tattoo Design 2">
+        <p>Tribal Design</p>
+      </div>
+      <div class="tattoo-card">
+        <img src="tattoo3.jpg" alt="Tattoo Design 3">
+        <p>Minimalist Line Work</p>
+      </div>
+      <div class="tattoo-card">
+        <img src="tattoo4.jpg" alt="Tattoo Design 4">
+        <p>Custom Chest Concept</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tattoo Booking Section -->
+  <section id="booking" class="booking">
+    <h2>Book Your Tattoo</h2>
+    <p>Fill in the form below to request a custom tattoo session with Melusi.</p>
+
+    <form action="booking.php" method="post" class="booking-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="style">Preferred Tattoo Style:</label>
+      <input type="text" id="style" name="style" placeholder="e.g. Realism, Tribal, Minimalist">
+
+      <label for="date">Preferred Booking Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="message">Tattoo Description:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Describe your idea..."></textarea>
+
+      <button type="submit">Book Session</button>
+    </form>
+  </section>
+  <p><a href="index.html" style="color:gold;text-decoration:none;">← Back to Gallery</a></p>
+  </section>
+
+
+  <footer>
+    <p>© 2025 JPG Art Gallery & Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>

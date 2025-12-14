@@ -1,0 +1,185 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 20px 60px;
+    background: #0a75ad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+header nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    opacity: 0.7;
+}
+
+/* Hero Section */
+.hero {
+    height: 95vh;
+    background: url("https://images.unsplash.com/photo-1584433144859-1fc3ab64a957") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    position: relative;
+}
+
+/* Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Glass Box */
+.hero-box {
+    position: relative;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-box h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-box p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 12px 28px;
+    background: #0a75ad;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #085d85;
+}
+
+/* Appointment Section */
+.appointment-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.appointment-section h2 {
+    font-size: 32px;
+    color: #0a75ad;
+    margin-bottom: 25px;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #0a75ad;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #085d85;
+}
+
+/* Footer */
+footer {
+    background: #0a75ad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    header nav {
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-box {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    .hero-box h1 {
+        font-size: 32px;
+    }
+}
